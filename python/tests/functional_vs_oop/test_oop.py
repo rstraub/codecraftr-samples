@@ -8,7 +8,7 @@ def test_couple_increases_weight_length():
 
     assert train.weight() == 1000 + 500
     assert train.length() == 150 + 75
-    assert len(train.train_sets) == 2
+    assert len(train.composition) == 2
 
 
 def test_decouple_decreases_weight_length_and_trainsets():
@@ -18,4 +18,4 @@ def test_decouple_decreases_weight_length_and_trainsets():
 
     assert train.weight() == 1000
     assert train.length() == 150
-    assert len(train.train_sets) == 1
+    assert len(train.composition) == 1

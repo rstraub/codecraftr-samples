@@ -1,19 +1,19 @@
 class Train:
-    def __init__(self, train_sets):
-        self.train_sets = train_sets
+    def __init__(self, composition):
+        self.composition = composition
 
     def couple(self, train_set):
-        self.train_sets.append(train_set)
+        self.composition.append(train_set)
 
     def decouple(self):
-        self.train_sets.pop()
+        self.composition.pop()
 
     def length(self):
-        lengths = [train_set.length for train_set in self.train_sets]
+        lengths = [train_set.length for train_set in self.composition]
         return sum(lengths)
 
     def weight(self):
-        weights = [train_set.weight for train_set in self.train_sets]
+        weights = [train_set.weight for train_set in self.composition]
         return sum(weights)
 
 
